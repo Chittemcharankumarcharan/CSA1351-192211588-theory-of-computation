@@ -1,0 +1,90 @@
+27. 
+statement = input("Enter the statement: ")
+
+vowel_count = 0
+consonant_count = 0
+vowels = "aeiouAEIOU"
+
+for char in statement:
+    if char.isalpha():
+        if char in vowels:
+            vowel_count += 1
+        else:
+            consonant_count += 1
+
+# Print the counts
+print(f"Number of vowels = {vowel_count}")
+print(f"Number of consonants = {consonant_count}")
+
+output
+Enter the statement: Saveetha School of Engineering
+Number of vowels = 12
+Number of consonants = 15
+
+29.
+
+filename = "Hello.txt"
+
+# Initialize counters
+space_count = 0
+line_count = 0
+vowel_count = 0
+consonant_count = 0
+vowels = "aeiouAEIOU"
+
+# Open the file and process it
+with open(filename, 'r') as file:
+    for line in file:
+        line_count += 1
+        space_count += line.count(' ')
+        for char in line:
+            if char.isalpha():
+                if char in vowels:
+                    vowel_count += 1
+                else:
+                    consonant_count += 1
+
+# Print the results
+print(f"Number of spaces: {space_count}")
+print(f"Number of lines: {line_count}")
+print(f"Number of vowels: {vowel_count}")
+print(f"Number of consonants: {consonant_count}")
+output
+
+Number of spaces: 5
+Number of lines: 1
+Number of vowels: 12
+Number of consonants: 22
+
+30.
+rows = int(input("Enter the number of rows: "))
+
+for i in range(1, rows + 1):
+    for j in range(1, i + 1):
+        print(f"{j / 10:.1f}", end=" ")
+    print()
+
+output
+Enter the number of rows: 5
+0.1 
+0.1 0.2 
+0.1 0.2 0.3 
+0.1 0.2 0.3 0.4 
+0.1 0.2 0.3 0.4 0.5 
+
+27.
+a = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+main_diagonal_sum = 0
+
+for i in range(len(a)):
+    main_diagonal_sum += a[i][i]
+
+print(f"Main diagonal sum: {main_diagonal_sum}")
+output
+
+Main diagonal sum: 15
